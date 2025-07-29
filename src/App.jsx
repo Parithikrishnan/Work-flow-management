@@ -1,17 +1,15 @@
 import './App.css';
 import LoginPage from './LoginPage.jsx';
-import bgImage from './assets/bg.jpg';
-import { Route,Routes } from 'react-router-dom';
-
+import RegisterPage from './RegisterPage.jsx';
+import { Route, Routes, Navigate } from 'react-router-dom';
 
 function App() {
   return (
-    <div
-      className='text-white h-[100vh] flex justify-center items-center bg-cover'
-      style={{ backgroundImage: `url(${bgImage})` }}
-    >
+    <div>
       <Routes>
-        <Route path='login' element = {<LoginPage/>} />
+        <Route path="/" element={<Navigate to="/login" />} /> {/* Default route to login */}
+        <Route path='/login' element={<LoginPage />} />
+        <Route path='/register' element={<RegisterPage />} /> {/* Add route for RegisterPage */}
       </Routes>
     </div>
   );

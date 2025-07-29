@@ -1,3 +1,11 @@
+/* Inject Tailwind's styles */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Set the default font for the entire site to Poppins */
+body {
+  font-family: 'Poppins', 'sans-serif';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
